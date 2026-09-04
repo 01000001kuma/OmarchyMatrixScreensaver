@@ -12,21 +12,22 @@ A Matrix-themed screensaver/lock screen plugin for Omarchy (Wayland compositor) 
 - **White Rabbit**: Fades in after the typewriter text
 - **Typewriter Text**: "Knock, knock...", "Wake up...", "Follow the white rabbit." with blinking cursor
 - **Terminal-style Password Input**: Monospace font with `> ` prompt
-- **Multi-monitor Support**: Primary screen shows full animation, secondary screens show only rain
+- **Multi-monitor Support**: Works with multiple monitors
 
-## Installation
+## Install
 
-1. Clone this repository
-2. Copy the folder to `~/.config/omarchy/plugins/`
-3. Rename to `akuma.matrix-screensaver`
-4. Restart Quickshell: `killall quickshell`
+```sh
+omarchy plugin add https://github.com/akuma/matrix-screensaver.git --enable
+```
 
 ## Usage
 
 Lock the screen with:
-```bash
+```sh
 omarchy system lock
 ```
+
+The screensaver will automatically activate when the screen locks.
 
 ## Animation Sequence
 
@@ -53,6 +54,12 @@ Edit `TypewriterText.qml` to change:
 - `TypewriterText.qml`: Typewriter text effect
 - `MatrixPasswordInput.qml`: Terminal-style password input
 - `assets/WhiteRabbit.png`: White rabbit image
+
+## Remove
+
+```sh
+omarchy plugin remove akuma.matrix-screensaver
+```
 
 ## License
 
