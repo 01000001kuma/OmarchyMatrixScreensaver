@@ -188,7 +188,7 @@ Item {
                 id: lockView
                 anchors.fill: parent
 
-                isPrimaryScreen: lockView.width >= 1920
+                isPrimaryScreen: true
                 screenName: lockSurface.output ? lockSurface.output.name : "unknown"
                 authenticating: root.authenticatingPassword
                 failureMessage: root.failureMessage

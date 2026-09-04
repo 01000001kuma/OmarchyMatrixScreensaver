@@ -53,7 +53,6 @@ Item {
         anchors.fill: parent
         cursorShape: Qt.BlankCursor
         z: 100
-        enabled: root.isPrimaryScreen
 
         onClicked: function(mouse) {
             if (root.state === "rain") {
@@ -65,7 +64,6 @@ Item {
     }
 
     Keys.onPressed: function(event) {
-        if (!root.isPrimaryScreen) return
         if (root.state === "rain") {
             root.state = "fading"
             rain.fadeOut()
