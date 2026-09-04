@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "akuma.matrix-screensaver",
+  "name": "Matrix Screensaver Lock",
+  "version": "1.0.0",
+  "author": "aKuma",
+  "description": "The Matrix white rabbit lock screen. Cascada de Matrix, formación del conejo, typewriter, y password box con caracteres Matrix.",
+  "license": "MIT",
+  "kinds": ["service"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}
