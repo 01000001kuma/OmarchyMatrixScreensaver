@@ -2,6 +2,10 @@
 
 A Matrix-themed screensaver/lock screen plugin for Omarchy (Wayland compositor) featuring Matrix rain, white rabbit image, typewriter text, and terminal-style password input.
 
+## Demo
+
+![Matrix Screensaver Demo](assets/matrix-demo.gif)
+
 ## Features
 
 - **Matrix Rain Effect**: Animated green characters falling like in The Matrix
