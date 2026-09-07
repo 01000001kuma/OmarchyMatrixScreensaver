@@ -1,4 +1,4 @@
-# Matrix Screensaver for Omarchy
+[Plugin]: # Matrix Screensaver for Omarchy
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Omarchy Plugin](https://img.shields.io/badge/Omarchy-Plugin-blue.svg)](https://plugins.omarchy.org)
