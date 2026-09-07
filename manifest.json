@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "akuma.matrix-screensaver",
-  "name": "Matrix Screensaver Lock",
+  "name": "Matrix Screensaver",
   "version": "1.0.0",
   "author": "aKuma",
-  "description": "The Matrix white rabbit lock screen. Cascada de Matrix, formación del conejo, typewriter, y password box con caracteres Matrix.",
+  "description": "A Matrix-themed screensaver/lock screen featuring rain effect, white rabbit, typewriter text, and terminal-style password input.",
   "license": "MIT",
   "kinds": ["service"],
   "keepLoaded": true,
