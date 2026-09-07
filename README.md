@@ -82,6 +82,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## Security
+
+This plugin does not handle authentication or security directly. All security mechanisms, including password validation and session management, are handled by [Omarchy](https://github.com/omacom/omarchy) and the underlying Wayland compositor. This plugin only provides a visual interface for the lock screen.
+
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/01000001kuma/OmarchyMatrixScreensaver/issues)
@@ -95,4 +99,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by [The Matrix](https://www.imdb.com/title/tt0133093/) (1999)
 - Built for [Omarchy](https://github.com/omacom/omarchy) community
-- Thanks to all contributors
+- I hope you like it
