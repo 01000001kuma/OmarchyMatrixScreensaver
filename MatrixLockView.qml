@@ -50,10 +50,15 @@ Item {
         passwordAppearTimer.stop()
     }
 
+    property real lastMouseX: 0
+    property real lastMouseY: 0
+    property real mouseThreshold: 10
+
     MouseArea {
         anchors.fill: parent
         cursorShape: Qt.BlankCursor
         z: 100
+        hoverEnabled: true
 
         onClicked: function(mouse) {
             if (root.state === "rain") {
@@ -61,6 +66,25 @@ Item {
                 rain.fadeOut()
                 fadeTimer.start()
             }
+        }
+
+        onPositionChanged: function(mouse) {
+            if (root.state === "rain") {
+                var dx = mouse.x - root.lastMouseX
+                var dy = mouse.y - root.lastMouseY
+                if (Math.sqrt(dx*dx + dy*dy) > root.mouseThreshold) {
+                    root.state = "fading"
+                    rain.fadeOut()
+                    fadeTimer.start()
+                }
+            }
+            root.lastMouseX = mouse.x
+            root.lastMouseY = mouse.y
+        }
+
+        onEntered: {
+            root.lastMouseX = mouseX
+            root.lastMouseY = mouseY
         }
     }
 
