@@ -19,7 +19,6 @@ Item {
     signal submitPassword(string password)
     signal passwordTextEdited(string password)
     signal clearFailureRequested()
-    signal emergencyUnlock()
 
     function startAnimation() {
         allTimersStop()
@@ -138,9 +137,6 @@ Item {
         }
         onClearFailureRequested: {
             root.clearFailureRequested()
-        }
-        onEmergencyUnlock: {
-            root.emergencyUnlock()
         }
     }
 

@@ -7,20 +7,16 @@ Item {
     readonly property int fieldWidth: 381
     readonly property int fieldHeight: 60
     readonly property int outlineThickness: 2
-    readonly property int safetySpaceCount: 5
-    readonly property int safetyTimeout: 2000
 
     property string password: ""
     property bool inputEnabled: false
     property bool authenticating: false
     property string failureMessage: ""
     property bool errorState: failureMessage.length > 0
-    property int spacePressCount: 0
 
     signal submitPassword(string password)
     signal passwordTextEdited(string password)
     signal clearFailureRequested()
-    signal emergencyUnlock()
 
     function randomMatrixChar() {
         var chars = "2 5 9 8 Z * ) : . \" = + - ¦ | _ ｦ ｱ ｳ ｴ ｵ ｶ ｷ ｹ ｺ ｻ ｼ ｽ ｾ ｿ ﾀ ﾂ ﾃ ﾅ ﾆ ﾇ ﾈ ﾊ ﾋ ﾎ ﾏ ﾐ ﾑ ﾒ ﾓ ﾔ ﾕ ﾗ ﾘ ﾜ"
@@ -162,23 +158,7 @@ Item {
                 root.clearPassword()
                 event.accepted = true
             }
-            if (event.key === Qt.Key_Space) {
-                root.spacePressCount++
-                safetyResetTimer.restart()
-                if (root.spacePressCount >= root.safetySpaceCount) {
-                    root.spacePressCount = 0
-                    root.emergencyUnlock()
-                    event.accepted = true
-                }
-            }
         }
-    }
-
-    Timer {
-        id: safetyResetTimer
-        interval: root.safetyTimeout
-        repeat: false
-        onTriggered: root.spacePressCount = 0
     }
 
     MouseArea {
