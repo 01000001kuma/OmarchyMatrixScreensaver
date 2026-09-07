@@ -203,9 +203,6 @@ Item {
                 onClearFailureRequested: {
                     root.failureMessage = ""
                 }
-                onEmergencyUnlock: {
-                    root.finishUnlock()
-                }
 
                 Component.onCompleted: {
                     root.lockViews.push(lockView)
