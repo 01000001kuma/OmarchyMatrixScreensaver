@@ -2,6 +2,7 @@ import QtQuick
 
 Item {
     id: root
+    focus: true
 
     readonly property color matrixGreen: "#00FF41"
     readonly property color matrixBlack: "#000000"
@@ -28,6 +29,7 @@ Item {
         passwordInput.clearPassword()
         state = "rain"
         rain.active = true
+        root.forceActiveFocus()
     }
 
     function stopAnimation() {
